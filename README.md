@@ -37,7 +37,7 @@ Before running this project, ensure you have the following installed:
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/<your-github-username>/brain-tumor-detection-system.git
+https://github.com/mahe115/Brain_Tmour_Detection.git
 Navigate to the project directory:
 
 cd brain-tumor-detection-system
