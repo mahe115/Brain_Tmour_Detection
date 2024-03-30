@@ -39,7 +39,7 @@ Below is the loss function graph obtained during the training of our model:
 
 ![Loss Function Graph](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/0ce2c175-cc76-4cff-8f4d-17294d833bfc.jpg)
 
-## Interface Screenshots
+## Model Result in Web Interface Screenshots
 
 Here are some snapshots of our web application interface:
 
@@ -57,3 +57,10 @@ Here are some snapshots of our web application interface:
 - Implementing additional layers or alternative architectures (like ResNet or Inception) to improve accuracy.
 - Expanding the dataset with more diverse examples to further enhance the model's robustness.
 - Developing a mobile application to make the system more accessible.
+
+## Model Training
+
+The CNN model was trained using a comprehensive notebook on Kaggle, which outlines the entire process, including data preprocessing, model architecture setup, training, and evaluation. You can access the notebook and delve into the specifics of the training process here:
+
+[Kaggle Notebook for Brain Tumor Detection System Training](https://www.kaggle.com/code/mahendranb7/brain-tumour-classification?rvi=1)
+
