@@ -26,46 +26,34 @@ This project is developed to assist in the early detection and classification of
 ### Prerequisites
 
 Before running this project, ensure you have the following installed:
+
 - Python (3.6 or later)
 - torch
 - streamlit
 - numpy
 - PIL
 
-### Installation
+## Loss Function Graph
 
-Clone this repository to your local machine:
+Below is the loss function graph obtained during the training of our model:
 
-```bash
-https://github.com/mahe115/Brain_Tmour_Detection.git
+![Loss Function Graph](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/0ce2c175-cc76-4cff-8f4d-17294d833bfc.jpg)
 
-Navigate to the project directory:
+## Interface Screenshots
 
-cd brain-tumor-detection-system
-Install the required dependencies:
+Here are some snapshots of our web application interface:
 
-pip install -r requirements.txt
-Running the Application
-To start the Streamlit web application, run the following command in your terminal:
+![Interface 1](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/4c06b083-3c69-4a6e-8aa1-740dbffba7ba.jpg)
+![Interface 2](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/54466196-5966-47a8-b09e-54f8974ff5b8.jpg)
+![Interface 3](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/c59c9032-40a2-4f47-91cf-42dfbf80eb53.jpg)
 
-streamlit run app.py
-Navigate to the localhost URL provided by Streamlit to interact with the application.
+## Challenges
 
-Usage
-Once the application is running, select the 'Brain Tumor Detection' option.
-Upload an MRI image of the brain using the file uploader.
-Click "Click For Result" to classify the image.
-The application will display the classification result, identifying the presence and type of tumor if applicable.
-Model Details
-The CNN model architecture consists of sequential convolutional layers, max pooling, and linear layers, culminating in a classification among the four possible outcomes. For detailed architecture and training process, refer to the Kaggle Notebook.
+- **Data Preprocessing**: Ensuring the MRI images were of a consistent format and quality for training posed initial challenges.
+- **Overfitting**: Given the complexity of the model and the diverse dataset, avoiding overfitting required careful tuning of the model parameters.
 
-Contributions
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or feature requests.
+## Future Work
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-vbnet
-Copy code
-
-Remember to replace `<your-github-username>` with your actual GitHub username where indicated. Thi
+- Implementing additional layers or alternative architectures (like ResNet or Inception) to improve accuracy.
+- Expanding the dataset with more diverse examples to further enhance the model's robustness.
+- Developing a mobile application to make the system more accessible.
