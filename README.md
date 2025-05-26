@@ -13,7 +13,7 @@ Brain tumors can be life-threatening if not diagnosed early. This application ai
 - ✅ Visual feedback with bounding boxes and class confidence
 - ✅ Clean and modern Streamlit web interface
 - ✅ Instant classification: "No Tumor", "Glioma", "Meningioma", or "Pituitary Tumor"
-- ![Loss Function Graph]([Perfromance and output images/val_batch0_labels.jpg](https://github.com/mahe115/Brain_Tumour_Detection/blob/1d612dadcd7c5c3e92f007cc8a26d52d0e48b47b/Perfromance%20and%20output%20images/val_batch0_labels.jpg))
+- ![Predictions](https://github.com/mahe115/Brain_Tumour_Detection/blob/1d612dadcd7c5c3e92f007cc8a26d52d0e48b47b/Perfromance%20and%20output%20images/val_batch0_labels.jpg)
 
 
 ## 🧠 Technologies Used
@@ -31,11 +31,11 @@ Upon uploading an image and clicking **"Click For Result"**, the application dis
 - The original image
 - The annotated image with tumor detection (if present)
 - A styled result box indicating tumor type and detection accuracy
-## Loss Function Graph
+## Performance Graph
 
-Below is the loss function graph obtained during the training of our model:
+Below is Performance  graph details obtained during the training of our model:
 
-![Loss Function Graph](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/0ce2c175-cc76-4cff-8f4d-17294d833bfc.jpg)
+![Performance Graph](https://github.com/mahe115/Brain_Tumour_Detection/blob/e577bdf8ee371298d3aacfc0f535d667a01383c5/Perfromance%20and%20output%20images/results.png)
 
 ## Example Output:
 - Detected: Glioma with accuracy: 98.56%
