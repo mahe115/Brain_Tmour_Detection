@@ -1,6 +1,6 @@
 # 🧠 Brain Tumor Detection System (YOLO-based)
 
-This project is an upgraded version of the Brain Tumor Detection System, now powered by the **YOLO object detection model** for improved performance and real-time tumor localization from MRI images. The new system offers an intuitive Streamlit-based web interface that allows users to upload brain MRI scans and receive instant tumor detection results.
+This project is an upgraded version of the my previous Brain Tumor Detection System, now powered by the **YOLO object detection model** for improved performance and real-time tumor localization from MRI images. The new system offers an intuitive Streamlit-based web interface that allows users to upload brain MRI scans and receive instant tumor detection results.
 
 ## 🚀 Project Overview
 
