@@ -1,43 +1,50 @@
-# Brain Tumor Detection System
+# 🧠 Brain Tumor Detection System (YOLO-based)
 
-The Brain Tumor Detection System is a deep learning project aimed at classifying MRI images into four categories: No Tumor, Glioma Tumor, Meningioma Tumor, and Pituitary Tumor. This system utilizes a Convolutional Neural Network (CNN) trained on a balanced dataset of 44,000 MRI images, ensuring accurate and unbiased predictions across all categories.
+This project is an upgraded version of the Brain Tumor Detection System, now powered by the **YOLO object detection model** for improved performance and real-time tumor localization from MRI images. The new system offers an intuitive Streamlit-based web interface that allows users to upload brain MRI scans and receive instant tumor detection results.
 
-## Project Overview
+## 🚀 Project Overview
 
-This project is developed to assist in the early detection and classification of brain tumors from MRI scans, which is crucial for treatment planning and improving patient outcomes. The CNN model has been trained with 11,000 images for each class, covering a wide range of tumor appearances and locations.
+Brain tumors can be life-threatening if not diagnosed early. This application aims to assist radiologists and medical practitioners by automating the detection of brain tumors from MRI scans using the **YOLOv8 model**. The web application highlights tumor regions and provides classification feedback with detection accuracy.
 
-## Features
+## 🎯 Key Features
 
-- Web application for easy interaction.
-- Upload MRI images for instant tumor detection.
-- Classification among four categories: No Tumor, Glioma, Meningioma, and Pituitary tumors.
-- Built with Streamlit, enabling a smooth user experience.
+- ✅ Upload MRI brain images (`.jpg`, `.jpeg`, `.png`)
+- ✅ Real-time object detection using a fine-tuned YOLOv8 model
+- ✅ Visual feedback with bounding boxes and class confidence
+- ✅ Clean and modern Streamlit web interface
+- ✅ Instant classification: "No Tumor", "Glioma", "Meningioma", or "Pituitary Tumor"
 
-## Technologies Used
+## 🧠 Technologies Used
 
 - Python
-- PyTorch
+- [YOLOv8](https://github.com/ultralytics/ultralytics) (via `ultralytics` package)
 - Streamlit
+- OpenCV
 - PIL (Python Imaging Library)
-- Numpy
+- Tempfile and OS modules for secure file handling
 
-## Getting Started
+## 🖥️ Interface Preview
 
-### Prerequisites
-
-Before running this project, ensure you have the following installed:
-
-- Python (3.6 or later)
-- torch
-- streamlit
-- numpy
-- PIL
-
+Upon uploading an image and clicking **"Click For Result"**, the application displays:
+- The original image
+- The annotated image with tumor detection (if present)
+- A styled result box indicating tumor type and detection accuracy
 ## Loss Function Graph
 
 Below is the loss function graph obtained during the training of our model:
 
 ![Loss Function Graph](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/0ce2c175-cc76-4cff-8f4d-17294d833bfc.jpg)
+
+## Example Output:
+- Detected: Glioma with accuracy: 98.56%
+
+![Loss Function Graph](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/0ce2c175-cc76-4cff-8f4d-17294d833bfc.jpg)
+
+
+- No tumor detected in the uploaded MRI image.
+
+![Loss Function Graph](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/0ce2c175-cc76-4cff-8f4d-17294d833bfc.jpg)
+
 
 ## Model Result in Web Interface Screenshots
 
