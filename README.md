@@ -13,7 +13,7 @@ Brain tumors can be life-threatening if not diagnosed early. This application ai
 - ✅ Visual feedback with bounding boxes and class confidence
 - ✅ Clean and modern Streamlit web interface
 - ✅ Instant classification: "No Tumor", "Glioma", "Meningioma", or "Pituitary Tumor"
-- ![Loss Function Graph](Perfromance and output images/val_batch0_labels.jpg)
+- ![Loss Function Graph]([Perfromance and output images/val_batch0_labels.jpg](https://github.com/mahe115/Brain_Tumour_Detection/blob/1d612dadcd7c5c3e92f007cc8a26d52d0e48b47b/Perfromance%20and%20output%20images/val_batch0_labels.jpg))
 
 
 ## 🧠 Technologies Used
