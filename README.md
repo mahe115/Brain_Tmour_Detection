@@ -13,7 +13,11 @@ Brain tumors can be life-threatening if not diagnosed early. This application ai
 - ✅ Visual feedback with bounding boxes and class confidence
 - ✅ Clean and modern Streamlit web interface
 - ✅ Instant classification: "No Tumor", "Glioma", "Meningioma", or "Pituitary Tumor"
-- ![Predictions](https://github.com/mahe115/Brain_Tumour_Detection/blob/1d612dadcd7c5c3e92f007cc8a26d52d0e48b47b/Perfromance%20and%20output%20images/val_batch0_labels.jpg)
+## Sample Web-Interface
+
+ ![Sample Web-Interface](https://github.com/mahe115/Brain_Tumour_Detection/blob/8c29cbccf6234ee22f0172cd60b466ab11583cba/Perfromance%20and%20output%20images/Screenshot%20(404).png)
+
+ ![Predictions](https://github.com/mahe115/Brain_Tumour_Detection/blob/1d612dadcd7c5c3e92f007cc8a26d52d0e48b47b/Perfromance%20and%20output%20images/val_batch0_labels.jpg)
 
 
 ## 🧠 Technologies Used
@@ -38,38 +42,46 @@ Below is Performance  graph details obtained during the training of our model:
 ![Performance Graph](https://github.com/mahe115/Brain_Tumour_Detection/blob/e577bdf8ee371298d3aacfc0f535d667a01383c5/Perfromance%20and%20output%20images/results.png)
 
 ## Example Output:
-- Detected: Glioma with accuracy: 98.56%
+- Detected: Glioma with accuracy: 82.24%
 
-![Loss Function Graph](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/0ce2c175-cc76-4cff-8f4d-17294d833bfc.jpg)
+![Loss Function Graph](https://github.com/mahe115/Brain_Tumour_Detection/blob/8c29cbccf6234ee22f0172cd60b466ab11583cba/Perfromance%20and%20output%20images/Screenshot%20(405).png)
 
 
 - No tumor detected in the uploaded MRI image.
 
-![Loss Function Graph](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/0ce2c175-cc76-4cff-8f4d-17294d833bfc.jpg)
+![Loss Function Graph](https://github.com/mahe115/Brain_Tumour_Detection/blob/8c29cbccf6234ee22f0172cd60b466ab11583cba/Perfromance%20and%20output%20images/Screenshot%20(406).png)
 
 
-## Model Result in Web Interface Screenshots
 
-Here are some snapshots of our web application interface:
+## ⚠️ Challenges
 
-![Interface 1](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/4c06b083-3c69-4a6e-8aa1-740dbffba7ba.jpg)
-![Interface 2](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/54466196-5966-47a8-b09e-54f8974ff5b8.jpg)
-![Interface 3](https://github.com/mahe115/Brain_Tmour_Detection/blob/14783e47e83804c7ef7e44f9af8800cfd14da1bd/c59c9032-40a2-4f47-91cf-42dfbf80eb53.jpg)
+- **Data Preprocessing**: MRI image formats and resolutions varied across the dataset. Consistent resizing and annotation formatting (YOLO label format) were crucial for optimal training.
+- **Annotation Accuracy**: Manual annotation for YOLO format was time-consuming and prone to error, which required verification and cleaning for model consistency.
+- **Class Imbalance**: Some tumor classes were underrepresented, leading to class imbalance issues that required augmentation strategies.
+- **Real-Time Optimization**: Ensuring fast and accurate detection without compromising on model size was critical for web deployment via Streamlit.
 
-## Challenges
+## 🔮 Future Work
 
-- **Data Preprocessing**: Ensuring the MRI images were of a consistent format and quality for training posed initial challenges.
-- **Overfitting**: Given the complexity of the model and the diverse dataset, avoiding overfitting required careful tuning of the model parameters.
+- Integrating support for **DICOM** image processing to enable direct use of medical-grade scan data.
+- Exploring **YOLOv8-seg** or other segmentation models to not only detect but **segment tumor regions more precisely**.
+- Creating a **cross-platform mobile app** using tools like React Native or Flutter for on-the-go diagnostics.
+- Deploying the model with **ONNX/TensorRT** for faster inference and reduced latency in real-time environments.
+- Adding **explainability** with Grad-CAM-like visualizations for better clinical acceptance.
 
-## Future Work
+## 🧠 Model Training (YOLOv8)
 
-- Implementing additional layers or alternative architectures (like ResNet or Inception) to improve accuracy.
-- Expanding the dataset with more diverse examples to further enhance the model's robustness.
-- Developing a mobile application to make the system more accessible.
+The YOLOv8 model was trained using a curated and annotated dataset of MRI brain images. Key steps in the training process included:
 
-## Model Training
+- Image augmentation (flips, rotation, contrast enhancement)
+- YOLO-format labeling (`.txt` files with bounding boxes and class labels)
+- Model fine-tuning with:
+  - Epochs: 50
+  - Input size: 640x640
+  - Batch size: 16
+  - Optimizer: SGD
+  - Learning rate scheduler for dynamic learning rates
 
-The CNN model was trained using a comprehensive notebook on Kaggle, which outlines the entire process, including data preprocessing, model architecture setup, training, and evaluation. You can access the notebook and delve into the specifics of the training process here:
+Training was conducted using Ultralytics’ YOLOv8 framework with GPU acceleration. The model achieved over **98% accuracy** in detecting and classifying tumors like **Glioma, Meningioma, Pituitary Tumor**, and **No Tumor**.
 
-[Kaggle Notebook for Brain Tumor Detection System Training](https://www.kaggle.com/code/mahendranb7/brain-tumour-classification?rvi=1)
-
+> **Access the earlier CNN-based training notebook for reference or comparison**:  
+> [Kaggle Notebook - Brain Tumor Classification (CNN Approach)](https://www.kaggle.com/code/mahendranb7/brain-tumour-classification?rvi=1)
